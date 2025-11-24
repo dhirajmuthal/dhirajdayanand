@@ -53,7 +53,7 @@ const Contact = () => {
     {
       icon: Facebook,
       label: "Facebook",
-      href: "https://www.facebook.com/profile.php?id=61576040181777",
+      href: "https://www.facebook.com/dhirajdayanand/",
     },
   ];
 
