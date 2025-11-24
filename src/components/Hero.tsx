@@ -28,7 +28,7 @@ const Hero = () => {
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-foreground leading-snug md:leading-snug">
               Performance Marketer Who Turns Attention Into Revenue.
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl md:text-2xl text-black dark:text-white font-bold max-w-2xl mx-auto">
               The guy brands call when their marketing looks busy but isn't actually moving.
             </p>
           </div>
