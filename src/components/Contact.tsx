@@ -53,7 +53,7 @@ const Contact = () => {
     {
       icon: Facebook,
       label: "Facebook",
-      href: "https://www.facebook.com/dhirajdayanand/",
+      href: "https://www.facebook.com/people/Dhiraj-Dayanand/pfbid0c7tm56UJnjdux4MbF2pMCBASPVnMPLa9qbBrVgBy4AGauB2DtGKDb5BzZc6uy1fyl/",
     },
   ];
 
