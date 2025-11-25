@@ -1,27 +1,21 @@
-import { Mail, Phone, Instagram, Linkedin, Facebook } from "lucide-react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { useState } from "react";
-import { toast } from "sonner";
+import { Mail, Phone, Instagram, Linkedin, Facebook } from "lucide-react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
     message: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Create mailto link with form data
-    const subject = encodeURIComponent(`Portfolio Inquiry from ${formData.name}`);
-    const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
-    window.location.href = `mailto:connect@dhirajdayanand.in?subject=${subject}&body=${body}`;
-    
-    toast.success("Opening your email client...");
-    setFormData({ name: "", email: "", message: "" });
+    const mailtoLink = `mailto:connect@dhirajdayanand.in?subject=Project Inquiry from ${formData.name}&body=Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0APhone: ${formData.phone}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`;
+    window.location.href = mailtoLink;
   };
 
   const contactInfo = [
@@ -53,54 +47,52 @@ const Contact = () => {
     {
       icon: Facebook,
       label: "Facebook",
-      href: "https://www.facebook.com/people/Dhiraj-Dayanand/pfbid0c7tm56UJnjdux4MbF2pMCBASPVnMPLa9qbBrVgBy4AGauB2DtGKDb5BzZc6uy1fyl/",
+      href: "https://facebook.com/dhirajdayanand",
     },
   ];
 
   return (
-    <section id="contact" className="py-24 bg-background">
+    <section id="contact" className="py-24 bg-muted">
       <div className="container mx-auto px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-6xl font-display font-bold mb-4 animate-fade-in">
-              Let's Work Together
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Ready to turn your marketing into a growth engine? Let's talk.
-            </p>
-          </div>
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-4xl md:text-6xl font-display font-bold text-center mb-4 text-foreground">
+            Hire Me
+          </h2>
+          <p className="text-center text-muted-foreground text-lg mb-16 max-w-2xl mx-auto">
+            Ready to turn your marketing into a revenue engine? Let's talk about your project.
+          </p>
 
-          <div className="grid md:grid-cols-2 gap-12">
-            {/* Left Column - Contact Info */}
-            <div className="space-y-8 animate-fade-in">
-              <div>
-                <h3 className="text-2xl font-display font-bold mb-6 text-foreground">
-                  Get in Touch
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Contact Info & Social */}
+            <div className="space-y-8">
+              <div className="bg-gradient-purple p-8 rounded-xl shadow-purple">
+                <h3 className="text-2xl font-display font-bold text-white mb-6">
+                  Get In Touch
                 </h3>
                 <div className="space-y-4">
-                  {contactInfo.map((item, index) => (
+                  {contactInfo.map((info, index) => (
                     <a
                       key={index}
-                      href={item.href}
+                      href={info.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-4 p-4 bg-muted rounded-lg hover:bg-primary/10 hover:border-primary border border-transparent transition-smooth group"
+                      className="flex items-center gap-4 text-white hover:text-white/80 transition-smooth"
                     >
-                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-smooth">
-                        <item.icon className="text-primary" size={20} />
+                      <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
+                        <info.icon size={24} />
                       </div>
                       <div>
-                        <div className="text-sm text-muted-foreground">{item.label}</div>
-                        <div className="font-semibold text-foreground">{item.value}</div>
+                        <p className="text-sm text-white/70">{info.label}</p>
+                        <p className="font-semibold">{info.value}</p>
                       </div>
                     </a>
                   ))}
                 </div>
               </div>
 
-              <div>
-                <h3 className="text-2xl font-display font-bold mb-6 text-foreground">
-                  Follow Me
+              <div className="bg-background p-8 rounded-xl border-2 border-primary shadow-lg">
+                <h3 className="text-2xl font-display font-bold text-foreground mb-6">
+                  Connect With Me
                 </h3>
                 <div className="flex gap-4">
                   {socialLinks.map((social, index) => (
@@ -109,79 +101,81 @@ const Contact = () => {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-12 h-12 bg-muted rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-smooth group"
+                      className="w-12 h-12 bg-gradient-purple rounded-lg flex items-center justify-center hover:scale-110 transition-smooth group"
                       aria-label={social.label}
                     >
-                      <social.icon size={20} />
+                      <social.icon className="text-white" size={24} />
                     </a>
                   ))}
                 </div>
               </div>
-
-              <div className="space-y-4 pt-6">
-                <Button
-                  asChild
-                  size="lg"
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground w-full"
-                >
-                  <a href="https://wa.me/917219332803" target="_blank" rel="noopener noreferrer">
-                    Book a Strategy Call
-                  </a>
-                </Button>
-              </div>
             </div>
 
-            {/* Right Column - Contact Form */}
-            <div className="animate-fade-in">
+            {/* Contact Form */}
+            <div className="bg-background p-8 rounded-xl border-2 border-border shadow-lg">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-semibold mb-2 text-foreground">
-                    Your Name
+                  <label htmlFor="name" className="block text-sm font-semibold text-foreground mb-2">
+                    Name *
                   </label>
                   <Input
                     id="name"
                     type="text"
-                    placeholder="John Doe"
+                    required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    required
+                    placeholder="Your name"
                     className="w-full"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-semibold mb-2 text-foreground">
-                    Email Address
+                  <label htmlFor="email" className="block text-sm font-semibold text-foreground mb-2">
+                    Email *
                   </label>
                   <Input
                     id="email"
                     type="email"
-                    placeholder="john@example.com"
+                    required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    required
+                    placeholder="your.email@example.com"
                     className="w-full"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-semibold mb-2 text-foreground">
-                    Your Message
+                  <label htmlFor="phone" className="block text-sm font-semibold text-foreground mb-2">
+                    Phone
+                  </label>
+                  <Input
+                    id="phone"
+                    type="tel"
+                    value={formData.phone}
+                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                    placeholder="+91 XXXXX XXXXX"
+                    className="w-full"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="message" className="block text-sm font-semibold text-foreground mb-2">
+                    Project Requirement *
                   </label>
                   <Textarea
                     id="message"
-                    placeholder="Tell me about your project and goals..."
+                    required
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    required
-                    className="w-full min-h-[150px]"
+                    placeholder="Tell me about your project and goals..."
+                    className="w-full min-h-[120px]"
                   />
                 </div>
 
                 <Button
                   type="submit"
                   size="lg"
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground w-full"
+                  className="w-full bg-gradient-purple text-white hover:opacity-90 transition-smooth"
                 >
                   Send Message
                 </Button>

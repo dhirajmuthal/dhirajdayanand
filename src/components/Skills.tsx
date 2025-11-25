@@ -1,49 +1,72 @@
-import { Target, Search, BarChart3, Share2 } from "lucide-react";
+import { Target, Search, Share2, TrendingUp, MousePointer, BarChart3, Layout, Database } from "lucide-react";
 
 const Skills = () => {
   const skills = [
     {
       icon: Target,
       title: "Meta Ads",
-      description: "Campaign setup, audience research, creative strategy, and optimization for maximum ROAS.",
+      description: "Strategic campaign creation and optimization for Facebook and Instagram advertising.",
     },
     {
       icon: Search,
       title: "Google Ads",
-      description: "Search, display, and shopping campaigns with conversion tracking and performance optimization.",
+      description: "Search, display, and shopping campaigns with conversion-focused optimization.",
     },
     {
-      icon: BarChart3,
-      title: "SEO & Audits",
-      description: "Technical SEO, on-page optimization, keyword research, and comprehensive site audits.",
+      icon: TrendingUp,
+      title: "SEO Execution",
+      description: "Technical SEO, on-page optimization, and content strategy for organic growth.",
     },
     {
       icon: Share2,
-      title: "Social Media",
-      description: "Content strategy, scheduling, community management, and brand building across platforms.",
+      title: "Social Media Strategy",
+      description: "Comprehensive social media management and content planning across platforms.",
+    },
+    {
+      icon: MousePointer,
+      title: "Facebook Pixel & Tracking",
+      description: "Advanced pixel implementation, event tracking, and conversion optimization.",
+    },
+    {
+      icon: BarChart3,
+      title: "GA4 Analytics",
+      description: "Google Analytics 4 setup, tracking, and data-driven insights for decision making.",
+    },
+    {
+      icon: Layout,
+      title: "Landing Page Optimization",
+      description: "CRO-focused landing page design and testing for maximum conversion rates.",
+    },
+    {
+      icon: Database,
+      title: "Basic Power BI",
+      description: "Data visualization and reporting (currently learning and expanding expertise).",
     },
   ];
 
   return (
-    <section className="py-24 bg-muted">
+    <section id="skills" className="py-24 bg-muted">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-6xl font-display font-bold text-center mb-16 animate-fade-in">
-            What I Do Best
+          <h2 className="text-4xl md:text-6xl font-display font-bold text-center mb-16 text-foreground">
+            Skills
           </h2>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {skills.map((skill, index) => (
               <div
                 key={index}
-                className="group p-6 bg-background rounded-xl border border-border hover:border-primary hover:shadow-purple transition-smooth animate-fade-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="group p-6 bg-background rounded-xl border-2 border-border hover:border-primary hover:shadow-purple transition-smooth"
               >
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-smooth">
-                  <skill.icon className="text-primary" size={24} />
+                <div className="w-14 h-14 bg-gradient-purple rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-smooth">
+                  <skill.icon className="text-white" size={28} />
                 </div>
-                <h3 className="text-xl font-semibold mb-2 text-foreground">{skill.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{skill.description}</p>
+                <h3 className="text-xl font-display font-bold mb-2 text-foreground">
+                  {skill.title}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {skill.description}
+                </p>
               </div>
             ))}
           </div>
