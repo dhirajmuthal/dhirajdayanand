@@ -45,7 +45,7 @@ const About = () => {
             </div>
 
             <div className="relative animate-fade-in">
-              <div className="aspect-square rounded-2xl overflow-hidden shadow-purple">
+              <div className="aspect-square rounded-full overflow-hidden shadow-purple">
                 <img
                   src={profileImg}
                   alt="Dhiraj Dayanand - Performance Marketer"
