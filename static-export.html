@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhiraj Dayanand | Performance Marketer | Meta Ads • Google Ads • SEO</title>
+    <meta name="description" content="Performance marketer specializing in Meta Ads, Google Ads, and SEO. Turning attention into revenue through psychology, analytics, and creativity.">
+    <meta name="author" content="Dhiraj Dayanand">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Dhiraj Dayanand | Performance Marketer">
+    <meta property="og:description" content="Turning attention into revenue through Meta Ads, Google Ads, and SEO.">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dhiraj Dayanand | Performance Marketer">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS Reset & Base Styles */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        :root {
+            --bg-primary: hsl(0, 0%, 100%);
+            --text-primary: hsl(240, 10%, 15%);
+            --purple: hsl(262, 52%, 47%);
+            --purple-light: hsl(262, 45%, 95%);
+            --purple-dark: hsl(262, 60%, 55%);
+            --text-muted: hsl(240, 4%, 46%);
+            --bg-muted: hsl(240, 5%, 96%);
+            --border: hsl(240, 6%, 90%);
+            --radius: 0.75rem;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--bg-primary);
+            -webkit-font-smoothing: antialiased;
+            scroll-behavior: smooth;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Anton', sans-serif;
+            line-height: 1.2;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            background: transparent;
+        }
+        
+        nav.scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        
+        .nav-logo {
+            font-family: 'Anton', sans-serif;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-logo:hover {
+            color: var(--purple);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--purple);
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 2px solid transparent;
+            gap: 0.5rem;
+        }
+        
+        .btn-primary {
+            background: var(--purple);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: var(--purple-dark);
+        }
+        
+        .btn-outline {
+            border: 2px solid var(--purple);
+            color: var(--purple);
+            background: transparent;
+        }
+        
+        .btn-outline:hover {
+            background: var(--purple);
+            color: white;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        
+        .mobile-nav {
+            display: none;
+            flex-direction: column;
+            gap: 1rem;
+            padding: 1rem 0;
+        }
+        
+        .mobile-nav.active {
+            display: flex;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, 
+                rgba(126, 80, 185, 0.2) 0%, 
+                rgba(255, 255, 255, 0.4) 40%, 
+                rgba(255, 255, 255, 0.6) 100%
+            );
+            backdrop-filter: blur(2px);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 1000px;
+            padding: 2rem;
+        }
+        
+        .hero h1 {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+        
+        .hero p {
+            font-size: clamp(1.125rem, 2vw, 1.5rem);
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+            margin: 2rem 0;
+            font-size: 1.125rem;
+        }
+        
+        .hero-tags span {
+            font-weight: 600;
+            color: var(--purple);
+        }
+        
+        .hero-tags .separator {
+            color: var(--text-muted);
+        }
+        
+        .hero-btns {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 6rem 0;
+        }
+        
+        .bg-muted {
+            background: var(--bg-muted);
+        }
+        
+        .section-title {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            text-align: center;
+            margin-bottom: 4rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .about-text {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .about-text p {
+            font-size: 1.125rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+        
+        .about-text .highlight {
+            color: var(--purple);
+            font-weight: 600;
+        }
+        
+        .about-text .strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+        
+        .info-card {
+            display: flex;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: var(--bg-muted);
+            border-radius: var(--radius);
+            align-items: flex-start;
+        }
+        
+        .info-card svg {
+            color: var(--purple);
+            flex-shrink: 0;
+            margin-top: 0.25rem;
+        }
+        
+        .info-card h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+        
+        .info-card p {
+            color: var(--text-muted);
+            margin: 0;
+        }
+        
+        .about-image {
+            position: relative;
+        }
+        
+        .about-image img {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+            border-radius: 1rem;
+            box-shadow: 0 10px 40px -10px rgba(126, 80, 185, 0.3);
+        }
+        
+        /* Grid Layouts */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        
+        .grid-3 {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        
+        .grid-4 {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        
+        /* Cards */
+        .card {
+            padding: 2rem;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover {
+            border-color: var(--purple);
+            box-shadow: 0 10px 40px -10px rgba(126, 80, 185, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .card-icon {
+            width: 3.5rem;
+            height: 3.5rem;
+            background: var(--purple-light);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover .card-icon {
+            background: rgba(126, 80, 185, 0.2);
+        }
+        
+        .card-icon svg {
+            color: var(--purple);
+        }
+        
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .card p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+        
+        .card-features {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .card-feature {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+        
+        .card-feature::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--purple);
+            border-radius: 50%;
+        }
+        
+        /* Portfolio Cards */
+        .portfolio-card {
+            background: white;
+            padding: 2rem;
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .portfolio-card:hover {
+            border-color: var(--purple);
+            box-shadow: 0 10px 40px -10px rgba(126, 80, 185, 0.3);
+        }
+        
+        .portfolio-metric {
+            font-size: 3rem;
+            font-family: 'Anton', sans-serif;
+            color: var(--purple);
+            margin-bottom: 0.5rem;
+        }
+        
+        .portfolio-label {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .portfolio-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .portfolio-desc {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .portfolio-stats {
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.875rem;
+        }
+        
+        .stat-label {
+            color: var(--text-muted);
+        }
+        
+        .stat-value {
+            font-weight: 600;
+        }
+        
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: var(--bg-muted);
+            border-radius: var(--radius);
+            text-decoration: none;
+            color: inherit;
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-item:hover {
+            background: var(--purple-light);
+            border-color: var(--purple);
+        }
+        
+        .contact-item-icon {
+            width: 3rem;
+            height: 3rem;
+            background: var(--purple-light);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .contact-item-icon svg {
+            color: var(--purple);
+        }
+        
+        .contact-item-text {
+            flex: 1;
+        }
+        
+        .contact-item-label {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+        
+        .contact-item-value {
+            font-weight: 600;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .social-link {
+            width: 3rem;
+            height: 3rem;
+            background: var(--bg-muted);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: var(--text-primary);
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background: var(--purple);
+            color: white;
+        }
+        
+        /* Form */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+        }
+        
+        .form-input, .form-textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .form-input:focus, .form-textarea:focus {
+            outline: none;
+            border-color: var(--purple);
+            box-shadow: 0 0 0 3px rgba(126, 80, 185, 0.1);
+        }
+        
+        .form-textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--bg-muted);
+            padding: 2rem 0;
+            text-align: center;
+            color: var(--text-muted);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            section {
+                padding: 4rem 0;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .grid-2 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .grid-4 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .grid-3 {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .grid-4 {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+        
+        /* Icon Styles */
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="nav">
+        <div class="container">
+            <a href="#home" class="nav-logo">DD</a>
+            
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="btn btn-primary">Let's Talk</a></li>
+            </ul>
+            
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="4" x2="20" y1="12" y2="12"/>
+                    <line x1="4" x2="20" y1="6" y2="6"/>
+                    <line x1="4" x2="20" y1="18" y2="18"/>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="mobile-nav" id="mobileNav">
+            <a href="#home" onclick="closeMobileMenu()">Home</a>
+            <a href="#about" onclick="closeMobileMenu()">About</a>
+            <a href="#services" onclick="closeMobileMenu()">Services</a>
+            <a href="#work" onclick="closeMobileMenu()">Work</a>
+            <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+            <a href="#contact" class="btn btn-primary" onclick="closeMobileMenu()">Let's Talk</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero" style="background-image: url('src/assets/hero-bg.jpg');">
+        <div class="hero-content animate-fade">
+            <h1>Performance Marketer Who Turns Attention Into Revenue.</h1>
+            <p>The guy brands call when their marketing looks busy but isn't actually moving.</p>
+            
+            <div class="hero-tags">
+                <span>Meta Ads</span>
+                <span class="separator">•</span>
+                <span>Google Ads</span>
+                <span class="separator">•</span>
+                <span>SEO</span>
+                <span class="separator">•</span>
+                <span>Social Media Management</span>
+            </div>
+            
+            <div class="hero-btns">
+                <a href="#contact" class="btn btn-primary">
+                    Work With Me
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+                    </svg>
+                </a>
+                <a href="#work" class="btn btn-outline">
+                    View My Results
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m3 17 6-6 4 4 8-8"/><path d="M21 7v6h-6"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        I'm <span class="highlight">Dhiraj Dayanand</span> — the guy brands call when their marketing looks busy but isn't actually moving.
+                    </p>
+                    <p>
+                        Whether it's Meta Ads, Google Ads, or SEO, my work is built on one principle: 
+                        <span class="strong">if it doesn't grow the business, it's a distraction.</span>
+                    </p>
+                    <p>
+                        If you like marketing that blends psychology, analytics, and creativity, you'll like working with me.
+                    </p>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem;">
+                        <div class="info-card">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                            </svg>
+                            <div>
+                                <h3>Education</h3>
+                                <p>BBA — Amity University Online</p>
+                                <p style="font-size: 0.875rem;">2023 – 2026</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/>
+                            </svg>
+                            <div>
+                                <h3>Digital Marketing Intern</h3>
+                                <p>Pooinfotech Digital Solutions, Pune (Remote)</p>
+                                <p style="font-size: 0.875rem;">Aug 2025 – Present</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    <img src="src/assets/profile.jpg" alt="Dhiraj Dayanand - Performance Marketer">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="bg-muted">
+        <div class="container">
+            <h2 class="section-title">What I Do Best</h2>
+            
+            <div class="grid-4">
+                <div class="card">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>
+                        </svg>
+                    </div>
+                    <h3>Meta Ads</h3>
+                    <p>Campaign setup, audience research, creative strategy, and optimization for maximum ROAS.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+                        </svg>
+                    </div>
+                    <h3>Google Ads</h3>
+                    <p>Search, display, and shopping campaigns with conversion tracking and performance optimization.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/>
+                        </svg>
+                    </div>
+                    <h3>SEO & Audits</h3>
+                    <p>Technical SEO, on-page optimization, keyword research, and comprehensive site audits.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 8a6 6 0 0 0-12 0v3a6 6 0 0 0 12 0v-3z"/><path d="M12 14v7"/><path d="M5 21h14"/>
+                        </svg>
+                    </div>
+                    <h3>Social Media</h3>
+                    <p>Content strategy, scheduling, community management, and brand building across platforms.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title">Services</h2>
+            <p class="section-subtitle">Specialized marketing solutions that drive real business growth</p>
+            
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>
+                        </svg>
+                    </div>
+                    <h3>Meta Ads Management</h3>
+                    <p>End-to-end Meta advertising campaigns including strategy, setup, creative development, audience targeting, and ongoing optimization for maximum conversions.</p>
+                    <div class="card-features">
+                        <div class="card-feature">Campaign Setup</div>
+                        <div class="card-feature">Audience Research</div>
+                        <div class="card-feature">Creative Strategy</div>
+                        <div class="card-feature">Performance Optimization</div>
+                    </div>
+                    <a href="#contact" class="btn btn-outline" style="width: 100%;">
+                        Request Details
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M10 10h4"/><path d="M12 2v3"/><path d="M12 19v3"/><path d="m2 12 3-3"/><path d="m19 9 3 3"/><path d="m5 5 14 14"/>
+                        </svg>
+                    </div>
+                    <h3>Google Ads Setup</h3>
+                    <p>Comprehensive Google Ads campaigns across search, display, and shopping networks with conversion tracking, keyword research, and bid management.</p>
+                    <div class="card-features">
+                        <div class="card-feature">Search Campaigns</div>
+                        <div class="card-feature">Display Ads</div>
+                        <div class="card-feature">Shopping Ads</div>
+                        <div class="card-feature">Conversion Tracking</div>
+                    </div>
+                    <a href="#contact" class="btn btn-outline" style="width: 100%;">
+                        Request Details
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+                        </svg>
+                    </div>
+                    <h3>SEO Audits</h3>
+                    <p>In-depth technical SEO analysis, on-page optimization recommendations, keyword strategy, and actionable insights to improve organic rankings and traffic.</p>
+                    <div class="card-features">
+                        <div class="card-feature">Technical SEO</div>
+                        <div class="card-feature">On-Page Fixes</div>
+                        <div class="card-feature">Keyword Strategy</div>
+                        <div class="card-feature">Performance Reports</div>
+                    </div>
+                    <a href="#contact" class="btn btn-outline" style="width: 100%;">
+                        Request Details
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 8a6 6 0 0 0-12 0v3a6 6 0 0 0 12 0v-3z"/><path d="M12 14v7"/><path d="M5 21h14"/>
+                        </svg>
+                    </div>
+                    <h3>Social Media Management</h3>
+                    <p>Strategic content planning, scheduling, community engagement, and brand building across major social platforms to grow your online presence.</p>
+                    <div class="card-features">
+                        <div class="card-feature">Content Planning</div>
+                        <div class="card-feature">Post Scheduling</div>
+                        <div class="card-feature">Community Management</div>
+                        <div class="card-feature">Brand Strategy</div>
+                    </div>
+                    <a href="#contact" class="btn btn-outline" style="width: 100%;">
+                        Request Details
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="work" style="background: linear-gradient(135deg, rgba(126, 80, 185, 0.05) 0%, rgba(255, 255, 255, 1) 100%);">
+        <div class="container">
+            <h2 class="section-title">Proven Results</h2>
+            <p class="section-subtitle">Real campaigns, real numbers, real growth</p>
+            
+            <div class="grid-3">
+                <div class="portfolio-card">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <div class="portfolio-metric">200+</div>
+                    <div class="portfolio-label">Qualified Leads</div>
+                    <div class="portfolio-title">Wellness Coaches Lead Generation</div>
+                    <div class="portfolio-desc">Generated high-quality leads for wellness coaching services</div>
+                    <div class="portfolio-stats">
+                        <div class="stat-row">
+                            <span class="stat-label">Leads Generated</span>
+                            <span class="stat-value">200+</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Conversions</span>
+                            <span class="stat-value">20-25</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Conversion Rate</span>
+                            <span class="stat-value">10-12%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m3 17 6-6 4 4 8-8"/><path d="M21 7v6h-6"/>
+                        </svg>
+                    </div>
+                    <div class="portfolio-metric">847.9%</div>
+                    <div class="portfolio-label">ROAS</div>
+                    <div class="portfolio-title">Fitness + Wellness Business</div>
+                    <div class="portfolio-desc">Achieved exceptional return on ad spend within targeted months</div>
+                    <div class="portfolio-stats">
+                        <div class="stat-row">
+                            <span class="stat-label">ROAS</span>
+                            <span class="stat-value">847.9%</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Revenue Generated</span>
+                            <span class="stat-value">8.5x</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Campaign Period</span>
+                            <span class="stat-value">3 months</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>
+                        </svg>
+                    </div>
+                    <div class="portfolio-metric">804+</div>
+                    <div class="portfolio-label">Qualified Leads</div>
+                    <div class="portfolio-title">Wellness Brand Lead Campaign</div>
+                    <div class="portfolio-desc">Scaled lead generation with optimized ad spend efficiency</div>
+                    <div class="portfolio-stats">
+                        <div class="stat-row">
+                            <span class="stat-label">Leads Generated</span>
+                            <span class="stat-value">804+</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Monthly Ad Spend</span>
+                            <span class="stat-value">~₹33k</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Cost per Lead</span>
+                            <span class="stat-value">₹41</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Work Together</h2>
+            <p class="section-subtitle">Ready to turn your marketing into a growth engine? Let's talk.</p>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div>
+                        <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem;">Get in Touch</h3>
+                        
+                        <a href="mailto:connect@dhirajdayanand.in" class="contact-item">
+                            <div class="contact-item-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                                </svg>
+                            </div>
+                            <div class="contact-item-text">
+                                <div class="contact-item-label">Email</div>
+                                <div class="contact-item-value">connect@dhirajdayanand.in</div>
+                            </div>
+                        </a>
+                        
+                        <a href="https://wa.me/917219332803" target="_blank" class="contact-item" style="margin-top: 1rem;">
+                            <div class="contact-item-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                            </div>
+                            <div class="contact-item-text">
+                                <div class="contact-item-label">WhatsApp</div>
+                                <div class="contact-item-value">+91 7219332803</div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div>
+                        <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem;">Follow Me</h3>
+                        <div class="social-links">
+                            <a href="https://instagram.com/dhiraj.dayanand" target="_blank" class="social-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                                </svg>
+                            </a>
+                            <a href="https://linkedin.com/in/dhirajdayanand" target="_blank" class="social-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/>
+                                </svg>
+                            </a>
+                            <a href="https://facebook.com/dhiraj.dayanand" target="_blank" class="social-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/917219332803" target="_blank" class="btn btn-primary" style="width: 100%; margin-top: 1.5rem;">
+                        Book a Strategy Call
+                    </a>
+                </div>
+                
+                <div>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label class="form-label" for="name">Your Name</label>
+                            <input class="form-input" type="text" id="name" name="name" placeholder="John Doe" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email Address</label>
+                            <input class="form-input" type="email" id="email" name="email" placeholder="john@example.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="message">Your Message</label>
+                            <textarea class="form-textarea" id="message" name="message" placeholder="Tell me about your project and goals..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 Dhiraj Dayanand. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation scroll effect
+        window.addEventListener('scroll', function() {
+            const nav = document.getElementById('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            mobileNav.classList.toggle('active');
+        }
+
+        function closeMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            mobileNav.classList.remove('active');
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            const subject = encodeURIComponent(`Portfolio Inquiry from ${name}`);
+            const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+            
+            window.location.href = `mailto:connect@dhirajdayanand.in?subject=${subject}&body=${body}`;
+            
+            // Reset form
+            this.reset();
+            alert('Opening your email client...');
+        });
+    </script>
+</body>
+</html>
