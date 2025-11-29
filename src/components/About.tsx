@@ -1,49 +1,59 @@
+import profileImg from "@/assets/profile.jpg";
+import { GraduationCap, Briefcase } from "lucide-react";
+
 const About = () => {
   return (
     <section id="about" className="py-24 bg-background">
       <div className="container mx-auto px-6">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-6xl font-display font-bold text-center mb-12 text-foreground">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl md:text-6xl font-display font-bold text-center mb-16 animate-fade-in">
             About Me
           </h2>
 
-          <div className="space-y-8">
-            <div className="bg-muted p-8 rounded-xl shadow-lg">
-              <p className="text-lg text-foreground/80 leading-relaxed mb-6">
-                I'm a performance marketer who believes in results over noise. My approach combines 
-                data-driven strategy with creative execution to deliver campaigns that actually move the needle.
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6 animate-fade-in">
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                I'm <span className="text-primary font-semibold">Dhiraj Dayanand</span> — the guy brands call when their marketing looks busy but isn't actually moving.
               </p>
-              <p className="text-lg text-foreground/80 leading-relaxed">
-                With expertise spanning Meta Ads, Google Ads, SEO, and social media strategy, I help brands 
-                cut through the clutter and connect with their audience in meaningful ways that drive real business growth.
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Whether it's Meta Ads, Google Ads, or SEO, my work is built on one principle:{" "}
+                <span className="text-foreground font-semibold">if it doesn't grow the business, it's a distraction.</span>
               </p>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                If you like marketing that blends psychology, analytics, and creativity, you'll like working with me.
+              </p>
+
+              <div className="space-y-4 pt-6">
+                <div className="flex items-start gap-4 p-4 bg-muted rounded-lg">
+                  <GraduationCap className="text-primary mt-1" size={24} />
+                  <div>
+                    <h3 className="font-semibold text-foreground">Education</h3>
+                    <p className="text-muted-foreground">BBA — Amity University Online</p>
+                    <p className="text-sm text-muted-foreground">2023 – 2026</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4 p-4 bg-muted rounded-lg">
+                  <Briefcase className="text-primary mt-1" size={24} />
+                  <div>
+                    <h3 className="font-semibold text-foreground">Digital Marketing Intern</h3>
+                    <p className="text-muted-foreground">Pooinfotech Digital Solutions, Pune (Remote)</p>
+                    <p className="text-sm text-muted-foreground">Aug 2025 – Present</p>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            {/* Skills List */}
-            <div className="grid md:grid-cols-2 gap-4">
-              <div className="bg-gradient-purple p-6 rounded-xl shadow-purple">
-                <h3 className="text-xl font-display font-bold text-white mb-3">
-                  Core Expertise
-                </h3>
-                <ul className="space-y-2 text-white/90">
-                  <li>• Meta Ads & Facebook Marketing</li>
-                  <li>• Google Ads & PPC Campaigns</li>
-                  <li>• SEO & Content Strategy</li>
-                  <li>• Social Media Management</li>
-                </ul>
+            <div className="relative animate-fade-in">
+              <div className="aspect-square rounded-2xl overflow-hidden shadow-purple">
+                <img
+                  src={profileImg}
+                  alt="Dhiraj Dayanand - Performance Marketer"
+                  className="w-full h-full object-cover"
+                />
               </div>
-
-              <div className="bg-white border-2 border-primary p-6 rounded-xl shadow-lg">
-                <h3 className="text-xl font-display font-bold text-primary mb-3">
-                  Technical Skills
-                </h3>
-                <ul className="space-y-2 text-foreground/80">
-                  <li>• Facebook Pixel & Tracking</li>
-                  <li>• GA4 Analytics</li>
-                  <li>• Landing Page Optimization</li>
-                  <li>• Basic Power BI (Learning)</li>
-                </ul>
-              </div>
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/10 rounded-full blur-3xl" />
+              <div className="absolute -top-6 -left-6 w-32 h-32 bg-primary/10 rounded-full blur-3xl" />
             </div>
           </div>
         </div>

@@ -1,5 +1,6 @@
+import { ArrowRight, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import profileImg from "@/assets/profile.jpg";
+import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -9,84 +10,56 @@ const Hero = () => {
     }
   };
 
-  const floatingKeywords = [
-    { text: "Meta Ads", delay: "0s", duration: "3s" },
-    { text: "Google Ads", delay: "0.5s", duration: "3.5s" },
-    { text: "Social Media Strategy", delay: "1s", duration: "4s" },
-    { text: "SEO", delay: "1.5s", duration: "3.2s" },
-  ];
-
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-split"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden"
+      style={{
+        backgroundImage: `url(${heroBg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
     >
-      <div className="container mx-auto px-6 relative z-10 py-20">
-        <div className="max-w-5xl mx-auto text-center space-y-12">
-          {/* Large Background Text */}
-          <div className="relative">
-            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <h1 className="text-[10vw] md:text-[8rem] lg:text-[12rem] font-display font-bold text-foreground/5 whitespace-nowrap select-none">
-                DHIRAJ DAYANAND
-              </h1>
-            </div>
-
-            {/* Profile Image */}
-            <div className="relative z-10 flex justify-center mb-8">
-              <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-primary shadow-purple">
-                <img
-                  src={profileImg}
-                  alt="Dhiraj Dayanand"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* Floating Keywords */}
-          <div className="absolute inset-0 pointer-events-none">
-            {floatingKeywords.map((keyword, index) => (
-              <div
-                key={index}
-                className="absolute animate-float-slow"
-                style={{
-                  left: `${15 + index * 20}%`,
-                  top: `${30 + (index % 2) * 30}%`,
-                  animationDelay: keyword.delay,
-                  animationDuration: keyword.duration,
-                }}
-              >
-                <span className="inline-block px-6 py-3 rounded-full bg-gradient-purple text-white font-semibold text-sm md:text-base shadow-purple">
-                  {keyword.text}
-                </span>
-              </div>
-            ))}
-          </div>
-
-          {/* Hero Paragraph - NO BOLD, NO ANIMATION */}
-          <div className="space-y-4 relative z-10">
-            <p className="text-lg md:text-xl text-foreground max-w-3xl mx-auto leading-relaxed font-sans">
-              I'm Dhiraj Dayanand — the guy brands call when their marketing looks busy but isn't actually moving. 
-              Whether it's Meta Ads, Google Ads, or SEO, my work is built on one principle: if it doesn't grow the business, 
-              it's a distraction. If you like marketing that blends psychology, analytics, and creativity, you'll like working with me.
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background/40 to-background/60 backdrop-blur-[2px]" />
+      
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
+          <div className="space-y-4">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-foreground leading-tight">
+              Performance Marketer Who Turns Attention Into Revenue.
+            </h1>
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
+              The guy brands call when their marketing looks busy but isn't actually moving.
             </p>
           </div>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4 relative z-10">
+          <div className="flex flex-wrap items-center justify-center gap-4 text-lg">
+            <span className="text-primary font-semibold">Meta Ads</span>
+            <span className="text-muted-foreground">•</span>
+            <span className="text-primary font-semibold">Google Ads</span>
+            <span className="text-muted-foreground">•</span>
+            <span className="text-primary font-semibold">SEO</span>
+            <span className="text-muted-foreground">•</span>
+            <span className="text-primary font-semibold">Social Media Management</span>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
             <Button
               onClick={() => scrollToSection("contact")}
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground group shadow-purple"
             >
-              Hire Me
+              Work With Me
+              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-smooth" size={20} />
             </Button>
             <Button
               onClick={() => scrollToSection("work")}
               size="lg"
               variant="outline"
+              className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground group"
             >
-              View Portfolio
+              View My Results
+              <TrendingUp className="ml-2 group-hover:translate-y-[-2px] transition-smooth" size={20} />
             </Button>
           </div>
         </div>

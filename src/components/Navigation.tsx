@@ -25,9 +25,9 @@ const Navigation = () => {
   const navLinks = [
     { id: "home", label: "Home" },
     { id: "about", label: "About" },
-    { id: "skills", label: "Skills" },
-    { id: "work", label: "Portfolio" },
-    { id: "contact", label: "Hire Me" },
+    { id: "services", label: "Services" },
+    { id: "work", label: "Work" },
+    { id: "contact", label: "Contact" },
   ];
 
   return (
@@ -61,7 +61,7 @@ const Navigation = () => {
               variant="default"
               className="bg-primary hover:bg-primary/90"
             >
-              Hire Me
+              Let's Talk
             </Button>
           </div>
 
@@ -91,7 +91,7 @@ const Navigation = () => {
               variant="default"
               className="bg-primary hover:bg-primary/90 w-full"
             >
-              Hire Me
+              Let's Talk
             </Button>
           </div>
         )}

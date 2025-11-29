@@ -1,64 +1,90 @@
+import { TrendingUp, Users, Target } from "lucide-react";
+
 const Portfolio = () => {
   const projects = [
     {
-      title: "E-commerce ROAS Campaign",
-      description: "Achieved 847.9% ROAS for a fashion e-commerce brand through strategic Meta Ads optimization.",
-      gradient: "bg-gradient-purple",
+      icon: Users,
+      title: "Wellness Coaches Lead Generation",
+      metric: "200+",
+      label: "Qualified Leads",
+      description: "Generated high-quality leads for wellness coaching services",
+      stats: [
+        { label: "Leads Generated", value: "200+" },
+        { label: "Conversions", value: "20-25" },
+        { label: "Conversion Rate", value: "10-12%" },
+      ],
     },
     {
-      title: "Lead Generation Success",
-      description: "Generated 200+ qualified leads for a B2B SaaS company using targeted Google Ads campaigns.",
-      gradient: "bg-white border-2 border-primary",
+      icon: TrendingUp,
+      title: "Fitness + Wellness Business",
+      metric: "847.9%",
+      label: "ROAS",
+      description: "Achieved exceptional return on ad spend within targeted months",
+      stats: [
+        { label: "ROAS", value: "847.9%" },
+        { label: "Revenue Generated", value: "8.5x" },
+        { label: "Campaign Period", value: "3 months" },
+      ],
     },
     {
-      title: "SEO Traffic Growth",
-      description: "Increased organic traffic by 320% in 6 months through comprehensive SEO strategy.",
-      gradient: "bg-gradient-purple",
-    },
-    {
-      title: "Social Media Engagement",
-      description: "Built an engaged community of 50K+ followers across Instagram and LinkedIn for a personal brand.",
-      gradient: "bg-white border-2 border-primary",
-    },
-    {
-      title: "Landing Page Optimization",
-      description: "Improved conversion rates by 180% through data-driven landing page testing and optimization.",
-      gradient: "bg-gradient-purple",
-    },
-    {
-      title: "Multi-Channel Campaign",
-      description: "Orchestrated integrated campaigns across Meta, Google, and SEO delivering 5X ROI consistently.",
-      gradient: "bg-white border-2 border-primary",
+      icon: Target,
+      title: "Wellness Brand Lead Campaign",
+      metric: "804+",
+      label: "Qualified Leads",
+      description: "Scaled lead generation with optimized ad spend efficiency",
+      stats: [
+        { label: "Leads Generated", value: "804+" },
+        { label: "Monthly Ad Spend", value: "~₹33k" },
+        { label: "Cost per Lead", value: "₹41" },
+      ],
     },
   ];
 
   return (
-    <section id="work" className="py-24 bg-background">
+    <section id="work" className="py-24 bg-gradient-to-br from-primary/5 to-background">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-6xl font-display font-bold text-center mb-4 text-foreground">
-            Portfolio
+          <h2 className="text-4xl md:text-6xl font-display font-bold text-center mb-4 animate-fade-in">
+            Proven Results
           </h2>
-          <p className="text-center text-muted-foreground text-lg mb-16 max-w-2xl mx-auto">
-            Real results from real campaigns. Here's what happens when strategy meets execution.
+          <p className="text-xl text-muted-foreground text-center mb-16 max-w-2xl mx-auto">
+            Real campaigns, real numbers, real growth
           </p>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <div
                 key={index}
-                className={`${project.gradient} p-8 rounded-xl shadow-lg hover:shadow-purple hover:scale-105 transition-smooth group`}
+                className="group bg-card border border-border rounded-2xl p-8 hover:border-primary hover:shadow-purple transition-smooth animate-fade-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <h3 className={`text-2xl font-display font-bold mb-4 ${
-                  project.gradient.includes('gradient') ? 'text-white' : 'text-primary'
-                }`}>
-                  {project.title}
-                </h3>
-                <p className={`text-sm leading-relaxed ${
-                  project.gradient.includes('gradient') ? 'text-white/90' : 'text-foreground/80'
-                }`}>
-                  {project.description}
-                </p>
+                <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-smooth">
+                  <project.icon className="text-primary" size={28} />
+                </div>
+
+                <div className="mb-6">
+                  <div className="text-5xl font-display font-bold text-primary mb-2">
+                    {project.metric}
+                  </div>
+                  <div className="text-lg font-semibold text-foreground mb-2">
+                    {project.label}
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground mb-3">
+                    {project.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {project.description}
+                  </p>
+                </div>
+
+                <div className="space-y-3 pt-6 border-t border-border">
+                  {project.stats.map((stat, idx) => (
+                    <div key={idx} className="flex justify-between items-center">
+                      <span className="text-sm text-muted-foreground">{stat.label}</span>
+                      <span className="text-sm font-semibold text-foreground">{stat.value}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
