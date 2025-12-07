@@ -1,4 +1,4 @@
-import { Mail, Phone, Instagram, Linkedin, Facebook } from "lucide-react";
+import { Mail, Phone, Instagram, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -49,11 +49,6 @@ const Contact = () => {
       icon: Linkedin,
       label: "LinkedIn",
       href: "https://linkedin.com/in/dhirajdayanand",
-    },
-    {
-      icon: Facebook,
-      label: "Facebook",
-      href: "https://facebook.com/dhiraj.dayanand",
     },
   ];
 
